@@ -50,8 +50,9 @@ export const KobeCity:FC = () => (
           viewBox="0 0 1308 885"
         >
           {Object.values(KobeWards).map((ward, index) => (
-              <SPath d={ward} key={index}>
-              </SPath>
+            <Link to={`/home/${Object.keys(KobeWards)[index]}`}>
+              <SPath d={ward} key={index} />
+            </Link>
           ))}
         </svg>
       </SMap>
