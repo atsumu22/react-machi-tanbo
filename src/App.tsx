@@ -1,13 +1,17 @@
 import React from 'react';
-import { KobeCity } from './components/organisms/maps/KobeCity';
-import { Example } from './components/molecules/exampleVariants';
+import { ChakraProvider } from '@chakra-ui/react';
+import { BrowserRouter } from 'react-router-dom';
+
+import { Router } from './router/Router';
+import theme from './theme/theme';
 
 function App() {
   return (
-    <div className="App">
-      <KobeCity />
-      {/* <Example /> */}
-    </div>
+    <ChakraProvider theme={theme}>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </ChakraProvider>
   );
 };
 

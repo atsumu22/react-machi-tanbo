@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { FC } from 'react';
 import styled from '@emotion/styled';
 import { motion } from "framer-motion";
 
-import KobeWards from "../../../KobeWards.json";
+import KobeWards from "../../KobeWards.json";
+import { Link } from 'react-router-dom';
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -24,7 +25,7 @@ const item = {
   }
 };
 
-export const KobeCity = () => (
+export const KobeCity:FC = () => (
   <motion.ul
     className="container"
     variants={container}
@@ -49,7 +50,8 @@ export const KobeCity = () => (
           viewBox="0 0 1308 885"
         >
           {Object.values(KobeWards).map((ward, index) => (
-              <SPath d={ward} key={index} />
+              <SPath d={ward} key={index}>
+              </SPath>
           ))}
         </svg>
       </SMap>
@@ -67,7 +69,7 @@ const SPath = styled.path`
  cursor: pointer;
  transition: fill 0.3s linear;
  &:hover {
-  fill: rgb(175, 255, 2);
+  fill: #9AE6B4;
  }
 `;
 
