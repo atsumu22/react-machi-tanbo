@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import styled from '@emotion/styled';
 import { motion } from "framer-motion";
 
-import KobeWards from "../../KobeWards.json";
+import KobeWards from "../../data/KobeWards.json";
 import { Link } from 'react-router-dom';
 
 const container = {
@@ -33,6 +33,7 @@ export const KobeCity:FC = () => (
     animate="visible"
   >
     <motion.li
+      style={{ height: "90vh"}}
       className="item"
       variants={item}
       transition={{
@@ -75,6 +76,6 @@ const SPath = styled.path`
 `;
 
 const SMap = styled.div`
-  height: auto;
-  width: 100%;
+  height: 100%;
+  width: auto;
 `;
