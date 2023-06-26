@@ -44,9 +44,9 @@ export const Tarumi:FC = () => {
     >
       <SMap>
       <svg height="100%" viewBox="0 0 1870 1733.24" width="100%" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
-        {Object.values(tarumi).map((ward, index) => (
+        {Object.values(tarumi).map((town, index) => (
           <Link to={`/home/${Object.keys(tarumi)[index]}`}>
-            <SPath d={ward} key={index} />
+            <SPath d={town.d} key={index} />
           </Link>
         ))}
       </svg>
