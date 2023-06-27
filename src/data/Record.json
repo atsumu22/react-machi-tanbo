@@ -5,6 +5,7 @@
     "ward": "Tarumi",
     "date": "2019/05/23",
     "area": ["Higashitarumi", "Izumigaoka"],
+    "imageUrl": "http://www.shiopro.net/wp-content/uploads/2020/08/higashitarumi2-727x1024.jpg",
     "url": "http://www.shiopro.net/archives/1240"
   },
   {
@@ -13,6 +14,7 @@
     "ward": "Tarumi",
     "date": "2021/04/23",
     "area": ["Nakata", "Goshikiyama", "Kasumigaoka"],
+    "imageUrl": "http://www.shiopro.net/wp-content/uploads/2021/04/goshikiyama-2.jpg",
     "url": "http://www.shiopro.net/archives/2167"
   },
   {
@@ -21,6 +23,7 @@
     "ward": "Tarumi",
     "date": "2021/10/10",
     "area": ["Maikosaka", "Maikodai", "Nishimaiko"],
+    "imageUrl": "http://www.shiopro.net/wp-content/uploads/2021/09/machitannishimaiko-2.jpg",
     "url": "http://www.shiopro.net/archives/2363"
   },
   {
@@ -29,6 +32,7 @@
     "ward": "Tarumi",
     "date": "2022/02/04",
     "area": ["Shioyakitamachi", "Shioyadai", "Shioyacho", "Higashitarumicho1", "Higashitarumicho2"],
+    "imageUrl": "http://www.shiopro.net/wp-content/uploads/2022/01/DSC03178-1024x683.jpg",
     "url": "http://www.shiopro.net/archives/2507"
   },
   {
@@ -37,6 +41,7 @@
     "ward": "Tarumi",
     "date": "2022/09/23",
     "area": ["Kariguchidai", "Minamitamondai", "Shinryodai"],
+    "imageUrl": "http://www.shiopro.net/wp-content/uploads/2022/10/machitan_asagiri.png",
     "url": "http://www.shiopro.net/archives/3106"
   }
 ]
