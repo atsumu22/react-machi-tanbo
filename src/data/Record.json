@@ -1,0 +1,42 @@
+[
+  {
+   "id": 10,
+   "title": "東垂水",
+   "ward": "Tarumi",
+   "Date": "2019/05/23",
+   "area": ["Higashitarumi", "Izumigaoka"],
+   "url": "http://www.shiopro.net/archives/1240"
+  },
+  {
+    "id": 31,
+    "title": "五色山",
+    "ward": "Tarumi",
+    "Date": "2021/04/23",
+    "area": ["Nakata", "Goshikiyama", "Kasumigaoka"],
+    "url": "http://www.shiopro.net/archives/2167"
+  },
+  {
+   "id": 36,
+   "title": "西舞子",
+   "ward": "Tarumi",
+   "Date": "2021/10/10",
+   "area": ["Maikosaka", "Maikodai", "Nishimaiko"],
+   "url": "http://www.shiopro.net/archives/2363"
+  },
+  {
+   "id": 40,
+   "place": "塩屋",
+   "ward": "Tarumi",
+   "Date": "2022/02/04",
+   "area": ["Shioyakitamachi", "Shioyadai", "Shioyacho", "Higashitarumicho1", "Higashitarumicho2"],
+   "url": "http://www.shiopro.net/archives/2507"
+  },
+  {
+    "id": 46,
+    "place": "朝霧",
+    "ward": "Tarumi",
+    "Date": "2022/09/23",
+    "area": ["Kariguchidai", "Minamitamondai", "Shinryodai"],
+    "url": "http://www.shiopro.net/archives/3106"
+  }
+]

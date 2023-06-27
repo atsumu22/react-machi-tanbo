@@ -1,9 +1,10 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import styled from '@emotion/styled';
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import tarumi from "../../../data/Tarumi.json";
+import record from "../../../data/Record.json"
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -26,6 +27,8 @@ const item = {
 };
 
 export const Tarumi:FC = () => {
+  const [isVisited, setIsVisited] = useState(false);
+
   return (
   <motion.ul
     className="container"
@@ -46,7 +49,7 @@ export const Tarumi:FC = () => {
       <svg height="100%" viewBox="0 0 1870 1733.24" width="100%" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
         {Object.values(tarumi).map((town, index) => (
           <Link to={`/home/${Object.keys(tarumi)[index]}`}>
-            <SPath d={town.d} key={index} />
+            <SPath d={town.d} key={index} className={isVisited ? "marked": ""} />
           </Link>
         ))}
       </svg>
@@ -67,7 +70,13 @@ const SPath = styled.path`
  cursor: pointer;
  transition: fill 0.3s linear;
  &:hover {
-  fill: #9AE6B4;
+  fill: #2C7A7B;
+ }
+ &.marked {
+  fill: #4FD1C5;
+  &:hover {
+    fill: #2C7A7B;
+   }
  }
 `;
 
