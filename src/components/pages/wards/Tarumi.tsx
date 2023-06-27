@@ -1,10 +1,8 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import styled from '@emotion/styled';
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
-import tarumi from "../../../data/Tarumi.json";
-import record from "../../../data/Record.json"
+import { useVisitedTowns } from "../../../hooks/useVisitedTowns";
 
 const container = {
   hidden: { opacity: 1, scale: 0 },
@@ -27,7 +25,9 @@ const item = {
 };
 
 export const Tarumi:FC = () => {
-  const [isVisited, setIsVisited] = useState(false);
+  const { newTarumi } = useVisitedTowns();
+
+  console.log(newTarumi);
 
   return (
   <motion.ul
@@ -47,10 +47,8 @@ export const Tarumi:FC = () => {
     >
       <SMap>
       <svg height="100%" viewBox="0 0 1870 1733.24" width="100%" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
-        {Object.values(tarumi).map((town, index) => (
-          <Link to={`/home/${Object.keys(tarumi)[index]}`}>
-            <SPath d={town.d} key={index} className={isVisited ? "marked": ""} />
-          </Link>
+        {newTarumi.map((town, index) => (
+          <SPath d={town.d} key={index} className={town.isVisited ? "marked": ""} />
         ))}
       </svg>
       </SMap>
