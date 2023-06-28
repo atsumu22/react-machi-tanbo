@@ -1,7 +1,11 @@
-import { FC } from "react";
+import React, { FC } from "react";
+import { Tooltip } from '@chakra-ui/react'
+
 
 export const Suma:FC = () => {
   return (
-    <h1>須磨区！</h1>
+    <Tooltip label="Hey, I'm here!" aria-label='A tooltip'>
+      <h1>須磨区！</h1>
+    </Tooltip>
   );
 };

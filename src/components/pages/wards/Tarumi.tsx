@@ -1,6 +1,8 @@
 import { FC } from "react";
 import styled from '@emotion/styled';
 import { motion } from "framer-motion";
+import { Tooltip } from '@chakra-ui/react';
+
 
 import { useVisitedTowns } from "../../../hooks/useVisitedTowns";
 
@@ -52,7 +54,9 @@ export const Tarumi:FC = () => {
       <SMap>
       <svg height="100%" viewBox="0 0 1870 1733.24" width="100%" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg">
         {newTarumi.map((town, index) => (
-          <SPath d={town.d} key={index} className={town.isVisited ? "marked": ""} onClick={onClickModalOpen}/>
+          <Tooltip label={town.townNameKanji} aria-label='A tooltip'>
+            <SPath d={town.d} key={index} className={town.isVisited ? "marked": ""} onClick={onClickModalOpen}/>
+          </Tooltip>
         ))}
       </svg>
       </SMap>
