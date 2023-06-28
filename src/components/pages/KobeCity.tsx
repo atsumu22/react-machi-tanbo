@@ -31,6 +31,7 @@ export const KobeCity:FC = () => (
     variants={container}
     initial="hidden"
     animate="visible"
+    style={{ backgroundColor: "#EBF8FF" }}
   >
     <motion.li
       style={{ height: "90vh"}}
