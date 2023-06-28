@@ -1,45 +1,24 @@
 import { FC, memo } from "react";
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-  useDisclosure,
-  Stack,
-  Button,
-  Flex,
-  ButtonGroup,
-  Spacer,
-  Box,
-} from '@chakra-ui/react'
+import { Modal, ModalOverlay, ModalContent, ModalBody } from '@chakra-ui/react'
+
 import { ModalContentDetail } from "../../atoms/modalContetnt";
+import { Record } from "../../../types/record";
 
 type Props = {
-  // id: number;
-  // title: string;
-  // ward: string;
-  // date: string;
-  // area: string[],
-  // imageUrl: string;
-  // url: string;
+  records: Array<Record>;
   isOpen: boolean;
   onClose: () => void;
 }
 
 export const DetailModal: FC<Props> = memo((props) => {
-  // const {
-    // id, title, ward, date, area, imageUrl, url, isOpen, onClose } = props;
-  const { isOpen, onClose } = props;
+  const { records, isOpen, onClose } = props;
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} autoFocus={false}>
+    <Modal isOpen={isOpen} onClose={onClose} autoFocus={false} scrollBehavior="inside">
       <ModalOverlay />
       <ModalContent>
         <ModalBody p={3}>
-          <ModalContentDetail />
+          {records.map((record) => <ModalContentDetail record={record}/>)}
         </ModalBody>
       </ModalContent>
     </Modal>

@@ -1,21 +1,29 @@
 import { FC, memo } from "react";
 import styled from "@emotion/styled";
-import { Box, Button, ButtonGroup, Flex, Stack } from "@chakra-ui/react";
+import { Button, ButtonGroup } from "@chakra-ui/react";
 
-export const ModalContentDetail: FC = memo(() => {
+import { Record } from "../../types/record";
+
+type Props = {
+  record: Record | null;
+}
+
+export const ModalContentDetail: FC<Props> = memo((props) => {
+  const { record } = props;
+
   return (
     <SContetnt>
       <SImageBox>
-        <img src="http://www.shiopro.net/wp-content/uploads/2020/08/higashitarumi2-727x1024.jpg" alt="voucher" />
+        <img src={record?.imageUrl} alt="voucher" />
       </SImageBox>
       <STextBox>
           <SText>
             <div className="title">
               <h1>シオヤプロジェクトの勝手にまち探訪</h1>
-              <h1>{`vol.10 東垂水`}</h1>
+              <h1>{`vol.${record?.id} ${record?.title}`}</h1>
             </div>
             <div className="date">
-              <p>2019.05.23 実施</p>
+              <p>{`${record?.date}実施`}</p>
             </div>
           </SText>
           <ButtonGroup gap='2'>
@@ -31,7 +39,7 @@ export const ModalContentDetail: FC = memo(() => {
             </Button>
             <Button
               as="a"
-              href="http://www.shiopro.net/archives/1240"
+              href={record?.url}
               target="_blank"
               rel="noopener noreferrer"
               colorScheme="blue"
