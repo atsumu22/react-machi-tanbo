@@ -1,5 +1,5 @@
 export const Nishi = () => {
   return (
-    <h1>西区！</h1>
+    <h1>西区</h1>
   );
 };
